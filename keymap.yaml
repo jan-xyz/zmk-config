@@ -12,11 +12,11 @@ layers:
     - P
   - - {t: A, h: LSHIFT}
     - {t: S, h: Symbols}
-    - {t: D, h: LC(LS(LALT))}
+    - {t: D, h: Ctl+Sft+LALT}
     - {t: F, h: Nav}
-    - {t: G, h: LC(LG(LALT))}
+    - {t: G, h: Ctl+Gui+LALT}
     - H
-    - {t: J, h: LC(LS(LALT))}
+    - {t: J, h: Ctl+Sft+LALT}
     - {t: K, h: Numbers}
     - {t: L, h: Symbols}
     - {t: '''', h: RSHIFT}
@@ -38,8 +38,8 @@ layers:
     - {t: DEL, h: RCTRL}
   Nav:
   - - {t: ▽, type: trans}
-    - LG(Q)
-    - LG(W)
+    - Gui+Q
+    - Gui+W
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -52,20 +52,20 @@ layers:
     - Nav2
     - {type: held}
     - {t: ▽, type: trans}
-    - LG(LBKT)
+    - Gui+[
     - LEFT
     - DOWN
     - RIGHT
-    - LG(RBKT)
+    - Gui+]
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - LC(LG(LALT(LEFT)))
-    - LC(LG(LALT(SPACE)))
-    - LC(LG(LALT(RIGHT)))
+    - Ctl+Gui+Alt+LEFT
+    - Ctl+Gui+Alt+SPACE
+    - Ctl+Gui+Alt+RIGHT
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -89,27 +89,27 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - LG(LBKT)
-    - LA(LEFT)
+    - Gui+[
+    - Alt+LEFT
     - PG DN
-    - LA(RIGHT)
-    - LG(RBKT)
+    - Alt+RIGHT
+    - Gui+]
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - LC(LG(LA(U)))
+    - Ctl+Gui+Alt+U
     - {t: ▽, type: trans}
-    - LC(LG(LA(I)))
+    - Ctl+Gui+Alt+I
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - {t: LS(LC(TAB)), h: LALT}
-    - {t: LC(TAB), h: LCMD}
-    - {t: LS(LC(TAB)), h: RCMD}
-    - {t: LC(TAB), h: RALT}
-    - {t: LG(GRAVE), h: RCTRL}
+    - {t: Sft+Ctl+TAB, h: LALT}
+    - {t: Ctl+TAB, h: LCMD}
+    - {t: Sft+Ctl+TAB, h: RCMD}
+    - {t: Ctl+TAB, h: RALT}
+    - {t: Gui+`, h: RCTRL}
   Symbols:
   - ['!', '@', '#', '{', '}', ^, '&', '*', '`', '~']
   - - '|'
