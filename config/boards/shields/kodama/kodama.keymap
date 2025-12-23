@@ -5,6 +5,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 // Layer definitions
 #define BASE   0
@@ -23,6 +24,19 @@
 #define U_UND &kp LG(Z)
 
 #define U_TAPPING_TERM 200
+
+// Mouse keys
+#define U_BTN1 &mkp LCLK
+#define U_BTN2 &mkp RCLK
+#define U_BTN3 &mkp MCLK
+#define U_MS_U &mmv MOVE_UP
+#define U_MS_D &mmv MOVE_DOWN
+#define U_MS_L &mmv MOVE_LEFT
+#define U_MS_R &mmv MOVE_RIGHT
+#define U_WH_U &msc SCRL_UP
+#define U_WH_D &msc SCRL_DOWN
+#define U_WH_L &msc SCRL_LEFT
+#define U_WH_R &msc SCRL_RIGHT
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
@@ -89,13 +103,13 @@
             >;
         };
 
-        // Mouse layer (placeholder - ZMK mouse support varies)
+        // Mouse layer
         // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         // │  BOOT   │         │         │         │         │   │  Redo   │  Paste  │  Copy   │   Cut   │  Undo   │
         // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        // │   GUI   │   ALT   │  CTRL   │  SHIFT  │         │   │         │         │         │         │         │
+        // │   GUI   │   ALT   │  CTRL   │  SHIFT  │         │   │         │  MS_L   │  MS_D   │  MS_U   │  MS_R   │
         // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        // │         │  RALT   │         │         │         │   │         │         │         │         │         │
+        // │         │  RALT   │         │         │         │   │         │  WH_L   │  WH_D   │  WH_U   │  WH_R   │
         // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┴─────────╯
         //                     │         │         │         │   │  Btn2   │  Btn1   │  Btn3   │
         //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
@@ -103,9 +117,9 @@
             label = "Mouse";
             bindings = <
                 &bootloader    &none          &none          &none          &none              U_RDO          U_PST          U_CPY          U_CUT          U_UND
-                &kp LGUI       &kp LALT       &kp LCTRL      &kp LSHFT      &none              &none          &none          &none          &none          &none
-                &none          &kp RALT       &none          &none          &none              &none          &none          &none          &none          &none
-                                              &none          &none          &none              &none          &none          &none
+                &kp LGUI       &kp LALT       &kp LCTRL      &kp LSHFT      &none              &none          U_MS_L         U_MS_D         U_MS_U         U_MS_R
+                &none          &kp RALT       &none          &none          &none              &none          U_WH_L         U_WH_D         U_WH_U         U_WH_R
+                                              &none          &none          &none              U_BTN2         U_BTN1         U_BTN3
             >;
         };
 
