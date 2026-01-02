@@ -137,7 +137,7 @@
         // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         // │  BOOT   │         │         │         │         │   │  Redo   │  Paste  │  Copy   │   Cut   │  Undo   │
         // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        // │   GUI   │   ALT   │  CTRL   │  SHIFT  │         │   │CapsWord │  Left   │  Down   │   Up    │  Right  │
+        // │   GUI   │   ALT   │  CTRL   │  SHIFT  │         │   │  Left   │  Down   │   Up    │  Right  │CapsWord │ (vim: HJKL)
         // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
         // │         │  RALT   │         │         │         │   │  Insert │  Home   │  PgDn   │  PgUp   │   End   │
         // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┴─────────╯
@@ -147,7 +147,7 @@
             label = "Nav";
             bindings = <
                 &bootloader    &none          &none          &none          &none              U_RDO          U_PST          U_CPY          U_CUT          U_UND
-                &kp LGUI       &kp LALT       &kp LCTRL      &kp LSHFT      &none              &caps_word     &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT
+                &kp LGUI       &kp LALT       &kp LCTRL      &kp LSHFT      &none              &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &caps_word
                 &none          &kp RALT       &none          &none          &none              &kp INS        &kp HOME       &kp PG_DN      &kp PG_UP      &kp END
                                               &none          &none          &none              &kp RET        &kp BSPC       &kp DEL
             >;
@@ -157,9 +157,9 @@
         // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         // │  BOOT   │         │         │         │         │   │  Redo   │  Paste  │  Copy   │   Cut   │  Undo   │
         // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        // │   GUI   │   ALT   │  CTRL   │  SHIFT  │         │   │         │  MS_L   │  MS_D   │  MS_U   │  MS_R   │
+        // │   GUI   │   ALT   │  CTRL   │  SHIFT  │         │   │  MS_L   │  MS_D   │  MS_U   │  MS_R   │         │ (vim: HJKL)
         // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        // │         │  RALT   │         │         │         │   │         │  WH_L   │  WH_D   │  WH_U   │  WH_R   │
+        // │         │  RALT   │         │         │         │   │  WH_L   │  WH_D   │  WH_U   │  WH_R   │         │
         // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┴─────────╯
         //                     │         │         │         │   │  Btn2   │  Btn1   │  Btn3   │
         //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
@@ -167,8 +167,8 @@
             label = "Mouse";
             bindings = <
                 &bootloader    &none          &none          &none          &none              U_RDO          U_PST          U_CPY          U_CUT          U_UND
-                &kp LGUI       &kp LALT       &kp LCTRL      &kp LSHFT      &none              &none          U_MS_L         U_MS_D         U_MS_U         U_MS_R
-                &none          &kp RALT       &none          &none          &none              &none          U_WH_L         U_WH_D         U_WH_U         U_WH_R
+                &kp LGUI       &kp LALT       &kp LCTRL      &kp LSHFT      &none              U_MS_L         U_MS_D         U_MS_U         U_MS_R         &none
+                &none          &kp RALT       &none          &none          &none              U_WH_L         U_WH_D         U_WH_U         U_WH_R         &none
                                               &none          &none          &none              U_BTN2         U_BTN1         U_BTN3
             >;
         };
